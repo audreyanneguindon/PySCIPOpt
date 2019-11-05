@@ -4052,14 +4052,6 @@ cdef class Model:
 
         free(_coeffs)
 
-    def getVariablePseudocost(self, variable):
-        cdef float ps_up, ps_down
-        cdef SCIP_VAR* scip_var = (<Variable>variable).scip_var
-        
-        ps_up = SCIPgetVarPseudocost(self._scip, scip_var, SCIP_BRANCHDIR_UPWARDS)
-        ps_down = SCIPgetVarPseudocost(self._scip, scip_var, SCIP_BRANCHDIR_DOWNWARDS)
-        return ps_up * ps_down
-
     def getState(self, prev_state = None):
         cdef SCIP* scip = self._scip
         cdef int i, j, k, col_i

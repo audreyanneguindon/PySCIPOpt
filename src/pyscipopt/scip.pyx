@@ -7,6 +7,7 @@ import sys
 import warnings
 import numpy as np
 
+cimport numpy as np
 from cpython cimport Py_INCREF, Py_DECREF
 from libc.stdlib cimport malloc, free
 from libc.stdio cimport fdopen

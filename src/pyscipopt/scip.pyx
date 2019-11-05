@@ -5,6 +5,7 @@ from os.path import abspath
 from os.path import splitext
 import sys
 import warnings
+import numpy as np
 
 from cpython cimport Py_INCREF, Py_DECREF
 from libc.stdlib cimport malloc, free

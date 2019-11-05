@@ -10,6 +10,8 @@ import numpy as np
 from cpython cimport Py_INCREF, Py_DECREF
 from libc.stdlib cimport malloc, free
 from libc.stdio cimport fdopen
+from numpy.math cimport INFINITY, NAN
+from libc.math cimport sqrt as SQRT
 
 include "expr.pxi"
 include "lp.pxi"
